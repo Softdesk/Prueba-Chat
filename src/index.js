@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Header from './componentes/Header';
+import Navigation from './componentes/Navigation';
+import Chat from './componentes/Chat';
+import Message from './componentes/Message';
 import * as serviceWorker from './serviceWorker';
+import './index.css';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+ReactDOM.render(<Header/>, document.getElementById('header'));
+ReactDOM.render(<Navigation/>, document.getElementById('navigation'));
+ReactDOM.render(<Chat/>, document.getElementById('chat-user'));
+ReactDOM.render(<Message/>, document.getElementById('message'));
 serviceWorker.unregister();
